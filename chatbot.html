@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chatbot</title>
+        <link href="CSS/cssbot.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+    <body>
+        <div class="chat-button-container" onclick="openChatWindow()">
+            <img src="Documentos/bot.png" alt="Chat">
+        </div>
+        <div class="chat-popup" id="chat-window">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div>
+                       <img src="../../../../../../../../J:/Integrador/unicachi11/src/main/webapp/IMG/bot.png" alt="Avatar" class="header-image">
+                    </div>
+                    <div>
+                        <div class="header-title">Mercado Unicachi</div>
+                        <div class="header-subtitle">Bienvenido a Unicachi</div>
+                    </div>
+                    <div>
+                        <span class="header-close-button" onclick="closeChatWindow()">×</span>
+                    </div>
+                </div>
+                <div class="chat-history" id="chat-history">
+                    <div class="message assistant">
+                        <span class="avatar">
+                            <img src="Documentos/bot1.png" alt="" style="width: 50px; height: 50px;">
+                        </span>
+                        <div class="text">
+                            <p>¡Hola! Soy Jessica, tu asistente virtual.</p>
+                        </div>
+                    </div>
+                    <!-- Botones adicionales -->
+                    <div class="additional-buttons">
+                        <button class="btn" onclick="mostrarPoliticas()">Políticas</button>
+                        <button class="btn">Información</button>
+                        <button type="button" onclick="sendMessage('Asesor-Menú Principal #$CF$#a2848062-0649-c60d-7428-74079824d87b_48ba7b54-beb4-591e-0712-e41c4e059132', 'Asesor')" class="btn" id="whatsapp-button">Asesor</button>
+
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="chat-input-field" placeholder="Type a message...">
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </div>
+        <script src="js/bot.js" type="text/javascript"></script>
+        <script>
+                     // Escucha el evento click en el botón de WhatsApp y redirecciona al enlace
+                     document.getElementById("whatsapp-button").addEventListener("click", function () {
+                         window.location.href = "https://wa.me/902525307";
+                     });
+        </script>
+    </body>
+
+</html>
